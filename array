@@ -1,0 +1,10 @@
+% Creating a character array
+A = [0, -1, 4; 9, -14, 25; -34, 49, 64];
+C = (A >= 0)
+
+
+% compute the square root of only those elements of A given in the previous program that are no less than 0 and add 50 to those elements that are negative.
+A = [0, -1, 4; 9, -14, 25; -34, 49, 64];
+C = (A >= 0);
+A(C) = sqrt(A(C))
+A(~C) = A(~C) + 50
