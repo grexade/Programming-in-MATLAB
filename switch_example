@@ -1,0 +1,24 @@
+%% Calculating total elapsed day in a year
+
+%% function file
+function total_days = totall(month,day,extra_day)
+% the value of extra_day is 1 for a leap year and 0 otherwise.
+total_days = day;
+for k = 1:month - 1
+	switch k
+		case {1,3,5,7,8,10,12}
+			total_days = total_days + 31;
+		case {4,6,9,11}
+			total_days = total_days + 30;
+		case 2
+			total_days = total_days + 28 + extra_day;
+	end
+end
+
+
+
+%% Main Program
+month = input('Enter month (1 - 12): ');
+day = input('Enter day (1 - 31): ');
+extra_day = input('Enter 1 for leap year; 0 otherwise: ');
+total_days = totall(month,day,extra_day)
