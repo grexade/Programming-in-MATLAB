@@ -1,3 +1,20 @@
+%% Switch Example
+angle=input('Please enter the angle: ');
+switch angle
+	case 45
+		 disp('Northeast')
+	case 135
+		 disp('Southeast')
+	case 225
+		 disp('Southwest')
+	case 315
+		 disp('Northwest')
+	otherwise
+		 disp('Direction Unknown')
+end
+
+
+
 %% Calculating total elapsed day in a year
 
 %% function file
